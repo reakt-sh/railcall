@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"black-formatter.args": [
+			"--line-length",
+			"140"
+		],
+		"python.missingPackage.severity": "Warning",
+		"python.analysis.typeCheckingMode": "standard",
+		"editor.tabSize": 4,
+		"pylint.ignorePatterns": [
+			"**/.venv/*"
+		],
+		"pylint.importStrategy": "fromEnvironment",
+		"pylint.severity": {
+			"convention": "Warning"
+		}
+	}
+}

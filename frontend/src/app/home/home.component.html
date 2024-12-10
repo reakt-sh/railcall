@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 i18n>Home</h1>
+
+    <div class="center">
+        <mat-progress-spinner *ngIf="!loaded" mode="indeterminate"></mat-progress-spinner>
+
+        <div *ngIf="loaded">{{text}}</div>
+    </div>
+
+</div>

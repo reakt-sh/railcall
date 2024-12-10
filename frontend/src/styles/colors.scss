@@ -1,0 +1,15 @@
+/*
+ * Quick alias for variable access.
+ * See custom-theme.scss for available color variables
+ */
+@function v($var) {
+    @return var(--#{$var});
+}
+
+.accent {
+    color: v(accent) !important;
+}
+
+.warning {
+    color: v(warn) !important;
+}

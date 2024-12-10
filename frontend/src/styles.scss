@@ -1,0 +1,15 @@
+@forward 'styles/material/roboto.scss';
+@forward 'styles/material/material-icons.scss';
+@forward 'styles/colors.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

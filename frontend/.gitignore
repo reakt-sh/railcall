@@ -1,0 +1,21 @@
+# Project specific
+schema-gen/
+
+# Node
+/node_modules
+npm-debug.log
+
+# Angular
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+## Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings

@@ -1,0 +1,11 @@
+{
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
+    "recommendations": [
+        "EditorConfig.EditorConfig",
+        "ms-python.python",
+        "ms-python.pylint",
+        "ms-python.black-formatter",
+        "dbaeumer.vscode-eslint",
+        "angular.ng-template"
+    ]
+}
