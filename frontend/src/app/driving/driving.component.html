@@ -1,0 +1,19 @@
+<main>
+    <h2>Driving with the Train from your start to destination</h2>
+    <div *ngIf="time_to_drive>0">
+        <p>Time to drive: {{time_to_drive}}</p>
+    </div>
+    <div *ngIf="time_to_drive>0">
+        <form [formGroup]="updateForm" (submit)="update()">
+            <button mat-flat-button type="submit" class="primary">Get Update</button>
+        </form>
+    </div>
+    <div *ngIf="time_to_drive<=0">
+        <p>You reached your destination</p><br>
+        <form [formGroup]="restartForm" (submit)="restart()">
+            <button mat-flat-button type="submit" class="primary">Restart</button>
+        </form>
+    </div>
+    
+    
+</main>

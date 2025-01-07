@@ -25,7 +25,9 @@
         "@capacitor/android": "^6.2.0",
         "@capacitor/angular": "^2.0.3",
         "@capacitor/core": "^6.2.0",
+        "@capacitor/geolocation": "^6.1.0",
         "@capacitor/ios": "^6.2.0",
+        "@capacitor/preferences": "^6.0.3",
         "@maplibre/ngx-maplibre-gl": "^18.1.4",
         "@turf/turf": "^7.1.0",
         "loglevel": "^1.9.2",
@@ -46,6 +48,7 @@
         "angular-eslint": "19.0.0",
         "eslint": "^9.16.0",
         "jasmine-core": "~5.1.0",
+        "json-schema-to-typescript": "^15.0.3",
         "karma": "~6.4.0",
         "karma-chrome-launcher": "~3.2.0",
         "karma-coverage": "~2.2.0",
@@ -53,7 +56,6 @@
         "karma-jasmine-html-reporter": "~2.1.0",
         "source-map-explorer": "^2.5.3",
         "typescript": "~5.5.4",
-        "typescript-eslint": "8.10.0",
-        "json-schema-to-typescript": "^15.0.3"
+        "typescript-eslint": "8.10.0"
     }
 }

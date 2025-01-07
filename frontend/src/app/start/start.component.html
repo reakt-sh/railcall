@@ -1,0 +1,24 @@
+<main>
+    <section>
+        <h2>Select your start location</h2>
+        <div class="description">
+            Input a station or use your GPS location
+        </div>
+            <form [formGroup]="startLocation" class="station-input" (submit)="selectStart()">
+                <mat-form-field class="full-width">
+                    <mat-label>Station</mat-label>
+                    <input matInput id="start" type="text" formControlName="start"/>
+                </mat-form-field>
+                <button mat-flat-button type="submit" class="station-button">Select Start</button>
+            </form>
+        <div class="gps-button">
+            <form [formGroup]="gpsForm" (submit)="printCurrentPosition()">
+                <button mat-flat-button type="submit" class="primary">GPS</button>
+            </form>
+        </div>
+        <div class="map">
+            lat: {{lat}} <br>
+            lon: {{lon}}
+        </div>
+    </section>
+</main>

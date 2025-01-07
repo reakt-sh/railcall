@@ -1,0 +1,20 @@
+
+<main>
+    <h2>Waiting for the Train to arrive at the start</h2>
+   
+    <div *ngIf="time_to_wait<=0">
+        <form [formGroup]="getInForm" (submit)="get_in()">
+            <button mat-flat-button type="submit" class="primary">Get in</button>
+        </form>
+    </div>
+
+    <div *ngIf="time_to_wait>0">
+        <p>Time to wait: {{time_to_wait}}</p>
+    </div>
+
+    <div *ngIf="time_to_wait>0">
+        <form [formGroup]="updateForm" (submit)="update()">
+            <button mat-flat-button type="submit" class="primary">Get Update</button>
+        </form>
+    </div>
+    </main>

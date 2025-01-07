@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://reakt.sh/schema/location.json",
+    "title": "Location",
+    "description": "Describes a gps location with latitude and longitude.",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "lat",
+        "lon"
+    ],
+    "properties": {
+        "lat": {
+            "type": "number",
+            "description": "Latitude of the coordinate"
+        },
+        "lon": {
+            "type": "number",
+            "description": "Longitude of the coordinate"
+        }
+    }
+}

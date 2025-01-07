@@ -1,0 +1,68 @@
+import { Component, inject} from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router'; 
+import { Station } from '../shared/interfaces/station';
+import { ApiService } from '../shared/api.service';
+import { MyMaterialModule } from "../shared/my-material.module";
+import { FormGroup, ReactiveFormsModule} from '@angular/forms';
+
+@Component({
+  selector: 'app-waiting',
+  standalone: true,
+  imports: [CommonModule,ReactiveFormsModule,MyMaterialModule],
+  templateUrl: './waiting.component.html',
+  styleUrl: './waiting.component.scss'
+})
+export class WaitingComponent {
+  stationList: Station[] = [];
+  apiService: ApiService = inject(ApiService);
+  time_to_wait = -1
+  private timerId: any;
+  getInForm = new FormGroup({
+  })
+  updateForm = new FormGroup({
+  })
+
+  constructor(private router: Router) {
+    this.apiService.getJobId().then((jobID) => {
+      this.apiService.getJobUpdate(jobID).then(() => {
+        this.stationList = this.apiService.getAllStations();
+        this.time_to_wait = this.apiService.getTimeToWait()
+        this.startTimer()
+      })
+    })
+    
+  }
+
+  startTimer() {
+    if (this.timerId) {
+      clearInterval(this.timerId); // Vorherigen Timer stoppen
+    }
+
+    //this.time_to_wait = 10;
+    this.timerId = setInterval(() => {
+      if (this.time_to_wait > 0) {
+        this.time_to_wait--;
+      } else {
+        clearInterval(this.timerId); // Timer stoppen
+        //this.router.navigate(['/driving']);
+      }
+    }, 1000);
+  }
+
+
+  get_in() {
+    this.apiService.getIn().then(() => {
+      this.router.navigate(['/driving']);
+    })
+  }
+
+  update() {
+    const job_id = this.apiService.getJobId().then((jobId) => {
+      this.apiService.getJobUpdate(jobId).then(() => {
+        this.time_to_wait = this.apiService.getTimeToWait()
+      })
+    })
+    
+  }
+}
