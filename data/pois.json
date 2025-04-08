@@ -1,0 +1,618 @@
+{
+    "types": [
+        {
+            "id": 1,
+            "name": "Bahnübergang",
+            "icon": 1,
+            "description": "Ein mit Stop-Schildern versehener BÜ"
+        },
+        {
+            "id": 2,
+            "name": "Unwichtiger Bahnübergang",
+            "icon": 2,
+            "description": "Ein BÜ ohne Hinweisschilder (zum Beispiel Feldwege)"
+        },
+        {
+            "id": 3,
+            "name": "Haltepunkt",
+            "icon": 3,
+            "description": ""
+        },
+        {
+            "id": 7,
+            "name": "Generisch",
+            "icon": 0,
+            "description": ""
+        },
+        {
+            "id": 4,
+            "name": "Streckenende",
+            "icon": 4,
+            "description": ""
+        },
+        {
+            "id": 8,
+            "name": "Wendepunkt",
+            "icon": 5,
+            "description": ""
+        },
+        {
+            "id": 0,
+            "name": "None",
+            "icon": 0,
+            "description": ""
+        },
+        {
+            "id": 9,
+            "name": "TestPOIType",
+            "icon": 0,
+            "description": "Just for testing"
+        }
+    ],
+    "pois": [
+        {
+            "id": 2,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Malente Fußweg",
+            "description": "Der Weg zum Kurpark",
+            "pos": {
+                "lat": 54.16795514276929,
+                "lng": 10.55104046371384
+            },
+            "isTurningPoint": true
+        },
+        {
+            "id": 4,
+            "typeId": 3,
+            "trackId": 1,
+            "name": "Friederikenthal",
+            "description": "",
+            "pos": {
+                "lat": 54.27742844944839,
+                "lng": 10.61196690346371
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 5,
+            "typeId": 4,
+            "trackId": 1,
+            "name": "Bahnhof Lütjenburg",
+            "description": "",
+            "pos": {
+                "lat": 54.29287607855948,
+                "lng": 10.60109862008053
+            },
+            "isTurningPoint": true
+        },
+        {
+            "id": 6,
+            "typeId": 0,
+            "trackId": 1,
+            "name": "Eisenbahnüberführung Wasserlauf Kossau",
+            "description": "",
+            "pos": {
+                "lat": 54.29175833186886,
+                "lng": 10.60304135198923
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 7,
+            "typeId": 0,
+            "trackId": 1,
+            "name": "Eisenbahnüberführung Bundesstraße 202",
+            "description": "",
+            "pos": {
+                "lat": 54.29051218074746,
+                "lng": 10.60416687437752
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 8,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 15,010",
+            "description": "",
+            "pos": {
+                "lat": 54.27525786435475,
+                "lng": 10.61237992922058
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 9,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 14,278",
+            "description": "",
+            "pos": {
+                "lat": 54.26870156472734,
+                "lng": 10.61371036342539
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 10,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 13,940",
+            "description": "",
+            "pos": {
+                "lat": 54.266984788424,
+                "lng": 10.61577489654581
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 11,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 13,640",
+            "description": "",
+            "pos": {
+                "lat": 54.26391446274761,
+                "lng": 10.62002952391131
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 12,
+            "typeId": 1,
+            "trackId": 1,
+            "name": "Blekendorfer Straße",
+            "description": "",
+            "pos": {
+                "lat": 54.25879622285369,
+                "lng": 10.62576951662293
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 13,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 12,280",
+            "description": "",
+            "pos": {
+                "lat": 54.25363660710594,
+                "lng": 10.62989472998583
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 14,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 11,870",
+            "description": "",
+            "pos": {
+                "lat": 54.24998860584117,
+                "lng": 10.63078791247404
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 15,
+            "typeId": 3,
+            "trackId": 1,
+            "name": "Kletkamp",
+            "description": "",
+            "pos": {
+                "lat": 54.24413044427286,
+                "lng": 10.62772484355162
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 17,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 10,480",
+            "description": "",
+            "pos": {
+                "lat": 54.23782627117179,
+                "lng": 10.62826397789307
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 18,
+            "typeId": 1,
+            "trackId": 1,
+            "name": "Rührsberger Weg",
+            "description": "",
+            "pos": {
+                "lat": 54.23130478038833,
+                "lng": 10.62245977399284
+            },
+            "isTurningPoint": true
+        },
+        {
+            "id": 19,
+            "typeId": 3,
+            "trackId": 1,
+            "name": "Flehm",
+            "description": "",
+            "pos": {
+                "lat": 54.23083600854179,
+                "lng": 10.62233083514409
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 20,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 9,170",
+            "description": "",
+            "pos": {
+                "lat": 54.2273976630113,
+                "lng": 10.62142435179138
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 21,
+            "typeId": 0,
+            "trackId": 1,
+            "name": "Eisenbahnübergang Söhrener Au",
+            "description": "",
+            "pos": {
+                "lat": 54.22698529317409,
+                "lng": 10.62116951783293
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 22,
+            "typeId": 1,
+            "trackId": 1,
+            "name": "Hauptstraße",
+            "description": "",
+            "pos": {
+                "lat": 54.22189069636329,
+                "lng": 10.61424944611967
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 23,
+            "typeId": 0,
+            "trackId": 1,
+            "name": "Bahnhof Benz",
+            "description": "",
+            "pos": {
+                "lat": 54.2207208417749,
+                "lng": 10.61256233320618
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 24,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 7,670",
+            "description": "",
+            "pos": {
+                "lat": 54.21662138465484,
+                "lng": 10.60759913783629
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 25,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 7,330",
+            "description": "",
+            "pos": {
+                "lat": 54.21361475288094,
+                "lng": 10.60677410549317
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 26,
+            "typeId": 0,
+            "trackId": 1,
+            "name": "Eisenbahnübergang Malenter Au",
+            "description": "",
+            "pos": {
+                "lat": 54.21116317437699,
+                "lng": 10.60610891765747
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 27,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Wühren",
+            "description": "",
+            "pos": {
+                "lat": 54.2081514392386,
+                "lng": 10.60516746573637
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 28,
+            "typeId": 3,
+            "trackId": 1,
+            "name": "Malkwitz",
+            "description": "",
+            "pos": {
+                "lat": 54.20788633328737,
+                "lng": 10.6049852201354
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 29,
+            "typeId": 1,
+            "trackId": 1,
+            "name": "Brunskoppler Weg",
+            "description": "",
+            "pos": {
+                "lat": 54.19835550732333,
+                "lng": 10.5970001358429
+            },
+            "isTurningPoint": true
+        },
+        {
+            "id": 30,
+            "typeId": 3,
+            "trackId": 1,
+            "name": "Brunskoppel",
+            "description": "",
+            "pos": {
+                "lat": 54.19814839336756,
+                "lng": 10.59683377690739
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 31,
+            "typeId": 0,
+            "trackId": 1,
+            "name": "Forstweg",
+            "description": "",
+            "pos": {
+                "lat": 54.195,
+                "lng": 10.5911
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 16,
+            "typeId": 0,
+            "trackId": 1,
+            "name": "Landstraße L178",
+            "description": "",
+            "pos": {
+                "lat": 54.24268536586548,
+                "lng": 10.62734077463407
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 33,
+            "typeId": 1,
+            "trackId": 1,
+            "name": "Weg",
+            "description": "",
+            "pos": {
+                "lat": 54.1862046354982,
+                "lng": 10.59038043710785
+            },
+            "isTurningPoint": true
+        },
+        {
+            "id": 34,
+            "typeId": 1,
+            "trackId": 1,
+            "name": "Malkwitzer Weg",
+            "description": "",
+            "pos": {
+                "lat": 54.18386758023301,
+                "lng": 10.57018340322571
+            },
+            "isTurningPoint": true
+        },
+        {
+            "id": 35,
+            "typeId": 3,
+            "trackId": 1,
+            "name": "Malente Nord",
+            "description": "",
+            "pos": {
+                "lat": 54.18227755376287,
+                "lng": 10.56342418830418
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 36,
+            "typeId": 1,
+            "trackId": 1,
+            "name": "Lütjenburger Straße",
+            "description": "",
+            "pos": {
+                "lat": 54.18217866559564,
+                "lng": 10.56310774273071
+            },
+            "isTurningPoint": true
+        },
+        {
+            "id": 37,
+            "typeId": 2,
+            "trackId": 1,
+            "name": "Feldweg Streckenkilometer 1,840",
+            "description": "",
+            "pos": {
+                "lat": 54.18146917530204,
+                "lng": 10.56095123635328
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 38,
+            "typeId": 0,
+            "trackId": 1,
+            "name": "Eisenbahnübergang Wasserlauf",
+            "description": "",
+            "pos": {
+                "lat": 54.17750239798882,
+                "lng": 10.5570673873703
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 39,
+            "typeId": 1,
+            "trackId": 1,
+            "name": "Neversfelder Straße",
+            "description": "",
+            "pos": {
+                "lat": 54.17676613983736,
+                "lng": 10.55686328469254
+            },
+            "isTurningPoint": true
+        },
+        {
+            "id": 40,
+            "typeId": 1,
+            "trackId": 1,
+            "name": "Godenbergstraße",
+            "description": "",
+            "pos": {
+                "lat": 54.17467189253872,
+                "lng": 10.55600514307865
+            },
+            "isTurningPoint": true
+        },
+        {
+            "id": 41,
+            "typeId": 0,
+            "trackId": 1,
+            "name": "Straßenüberführung Kreisstraße",
+            "description": "",
+            "pos": {
+                "lat": 54.16978909011717,
+                "lng": 10.55139167471016
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 32,
+            "typeId": 3,
+            "trackId": 1,
+            "name": "Bahnhof Holsteinische Schweiz",
+            "description": "",
+            "pos": {
+                "lat": 54.18627840204964,
+                "lng": 10.59052012545154
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 1,
+            "typeId": 1,
+            "trackId": 1,
+            "name": "Hindenburgallee/Bahnhofstraße",
+            "description": "",
+            "pos": {
+                "lat": 54.16820637323903,
+                "lng": 10.55097608725436
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 43,
+            "typeId": 2,
+            "trackId": 3,
+            "name": "Auffahrt Uni",
+            "description": "",
+            "pos": {
+                "lat": 54.33642264772579,
+                "lng": 10.11854763667607
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 42,
+            "typeId": 2,
+            "trackId": 3,
+            "name": "Auffahrt OS",
+            "description": "",
+            "pos": {
+                "lat": 54.33965957496679,
+                "lng": 10.11907295023828
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 44,
+            "typeId": 7,
+            "trackId": 3,
+            "name": "Alte Bahnschienen oder so",
+            "description": "",
+            "pos": {
+                "lat": 54.33797703010066,
+                "lng": 10.1189875740448
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 45,
+            "typeId": 7,
+            "trackId": 3,
+            "name": "Brücke Gutenbergstraße",
+            "description": "",
+            "pos": {
+                "lat": 54.3325411265145,
+                "lng": 10.11690619362183
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 47,
+            "typeId": 7,
+            "trackId": 3,
+            "name": "Brücke Eckernförder Straße",
+            "description": "",
+            "pos": {
+                "lat": 54.33048292714004,
+                "lng": 10.11523252274166
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 48,
+            "typeId": 1,
+            "trackId": 3,
+            "name": "Kronshagener Weg",
+            "description": "",
+            "pos": {
+                "lat": 54.32641940133347,
+                "lng": 10.1093853002029
+            },
+            "isTurningPoint": false
+        },
+        {
+            "id": 49,
+            "typeId": 1,
+            "trackId": 3,
+            "name": "Hasseldieksdammer Weg",
+            "description": "",
+            "pos": {
+                "lat": 54.31928770949525,
+                "lng": 10.0992304224411
+            },
+            "isTurningPoint": false
+        }
+    ]
+}

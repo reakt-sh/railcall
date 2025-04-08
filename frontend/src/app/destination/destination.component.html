@@ -2,17 +2,21 @@
     <section>
         <h2>Select your destination</h2>
         <div class="description">
-            Input a station
+            Input a station or move the marker
         </div>
-        <form [formGroup]="destinationLocation" class="station-input" (submit)="selectDestination()">
-            <mat-form-field class="full-width">
+        <div class="station-input">
+            <mat-form-field appearance="fill">
                 <mat-label>Station</mat-label>
-                <input matInput id="destination" type="text" formControlName="destination"/>
+                <mat-select [(value)]="selectedOption">
+                    <mat-option [value]="null">No Selection</mat-option>
+                    <mat-option *ngFor="let option of options" [value]="option">
+                        {{ option }}
+                    </mat-option>
+                </mat-select>
             </mat-form-field>
-            <button mat-flat-button type="submit" class="station-button">Select Destination</button>
-        </form>
-        <div class="map">
-            
+            <br>
+            <button mat-flat-button type="submit" class="station-button" (click)="selectDestination()">Select Location</button>
         </div>
     </section>
 </main>
+<app-map></app-map>

@@ -4,6 +4,7 @@ import { StartComponent } from './start/start.component';
 import { DestinationComponent } from './destination/destination.component';
 import { WaitingComponent } from './waiting/waiting.component';
 import { DrivingComponent } from './driving/driving.component';
+import { MapComponent } from "./map/map.component";
 
 export const routes: Routes = [
     // Home
@@ -30,6 +31,11 @@ export const routes: Routes = [
         path: 'driving',
         component: DrivingComponent,
         title: 'Driving',
+      },
+      {
+        path: 'map',
+        component: MapComponent,
+        title: 'Map',
       },
     // Catch all
     {

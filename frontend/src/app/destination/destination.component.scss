@@ -1,25 +1,36 @@
 h2 {
     text-align: center;
+    margin-top: 2%;
 }
 .description {
     text-align: center;
     font-size: large;
+    margin-bottom: 2%;
+    margin-top: -4%;
 }
-.map {
-    margin-left: 5%;
-    margin-right: 5%;
-}
+
 .station-input {
     text-align: center;
+    margin-bottom: -6%;
 }
 .station-button {
     text-align: center;
-    margin-top: -10px;
-    margin-bottom: 10px;
+    margin-top: -4%;
+    margin-bottom: 2%;
 }
 .gps-button {
     text-align: center;
+    margin-top: 1%;
 }
-.full-width {
-    width: 90%; /* oder eine feste Breite z.B. 300px */   
-}
+
+@media (prefers-color-scheme: dark) {
+    mat-option {
+      color: white;
+    }
+  }
+
+
+
+
+
+  

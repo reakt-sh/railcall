@@ -16,9 +16,9 @@ import { Preferences } from '@capacitor/preferences';
 })
 export class ApiService {
   // url for web
-  url = 'http://127.0.0.1:5010/'
+  //url = 'http://localhost:5010/'
   // url for emulator
-  //url = 'http://10.0.2.2:5010/'
+  url = 'http://10.0.2.2:5010/'
 
   // stores the start location
   protected start: Location = {
@@ -62,6 +62,15 @@ export class ApiService {
     return this.stations.find((Station) => Station.id === id)
   }
   
+  protected worked_on = false
+  set_worked_on(status: boolean) {
+    this.worked_on = status
+  }
+  get_worked_on() {
+    return this.worked_on
+  }
+
+
   protected job: Job | any = 0
   async setJob (job:Job) {
     console.log(job)
@@ -77,6 +86,7 @@ export class ApiService {
     this.setDestination(job.end)
     this.setTimeToWait(waitingTime)
     this.setTimeToDrive(waitingTime)
+    this.set_worked_on(job.worked_on)
   }
 
   getJob(){
@@ -90,7 +100,13 @@ export class ApiService {
   }
 
   async removeJobId() {
+    let job_id = await this.getJobId() 
+    const options = {
+      url: this.url + "finish_job/" + job_id,
+    }
+    const response = await CapacitorHttp.delete(options);
     await Preferences.remove({key: 'job_id'});
+
   }
 
   async sendNewJob(router:Router) {
@@ -119,7 +135,11 @@ export class ApiService {
       headers: { 'Content-Type': 'application/json' },
     }
     const response = await CapacitorHttp.get(options);
-    await this.setJob(response.data)
+    if ("Error" in response.data) {
+      await Preferences.remove({key: 'job_id'});
+    }else {
+      await this.setJob(response.data)
+    }
     return;
   }
 
@@ -156,12 +176,32 @@ export class ApiService {
       lon: 0
     }
     const options = {
-      url: this.url + "find_nearest_location/" + location.lat + "/" + location.lon,
+      url: this.url + "find_nearest_location/",
+      headers: { 'Content-Type': 'application/json' },
+      data: location,
+    }
+    const response = await CapacitorHttp.post(options);
+    loc = (await response.data) ?? loc
+    return loc;
+  }
+
+
+  async getTrainLoc(): Promise<Location> {
+    let loc: Location = {
+      lat: 0,
+      lon: 0
+    }
+    
+    const options = {
+      url: this.url + "get_train_loc/",
       headers: { 'Content-Type': 'application/json' },
     }
     const response = await CapacitorHttp.get(options);
     loc = (await response.data) ?? loc
+    console.log("pos on track: ", loc)
     return loc;
   }
   constructor() { }
 }
+
+

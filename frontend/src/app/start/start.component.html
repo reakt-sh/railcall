@@ -4,21 +4,22 @@
         <div class="description">
             Input a station or use your GPS location
         </div>
-            <form [formGroup]="startLocation" class="station-input" (submit)="selectStart()">
-                <mat-form-field class="full-width">
-                    <mat-label>Station</mat-label>
-                    <input matInput id="start" type="text" formControlName="start"/>
-                </mat-form-field>
-                <button mat-flat-button type="submit" class="station-button">Select Start</button>
-            </form>
-        <div class="gps-button">
-            <form [formGroup]="gpsForm" (submit)="printCurrentPosition()">
-                <button mat-flat-button type="submit" class="primary">GPS</button>
-            </form>
-        </div>
-        <div class="map">
-            lat: {{lat}} <br>
-            lon: {{lon}}
+        <div class="station-input">
+            <mat-form-field appearance="fill">
+                <mat-label>Station</mat-label>
+                <mat-select [(value)]="selectedOption">
+                    <mat-option [value]="null">No Selection</mat-option>
+                    <mat-option *ngFor="let option of options" [value]="option">
+                        {{ option }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <button mat-flat-button type="submit" class="station-button" (click)="selectStart()">Select Location</button>
         </div>
     </section>
 </main>
+<app-map></app-map>
+<div class="gps-button">
+    <button mat-flat-button type="submit" class="primary" (click)="selectStartGPS()">GPS</button>    
+</div>

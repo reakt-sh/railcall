@@ -1,20 +1,22 @@
 
 <main>
-    <h2>Waiting for the Train to arrive at the start</h2>
+    <h2>Waiting for the Train</h2>
    
-    <div *ngIf="time_to_wait<=0">
-        <form [formGroup]="getInForm" (submit)="get_in()">
-            <button mat-flat-button type="submit" class="primary">Get in</button>
-        </form>
+    <div *ngIf="time_to_wait<=0 && worked_on">
+        <p>Train arrived</p>
     </div>
 
-    <div *ngIf="time_to_wait>0">
-        <p>Time to wait: {{time_to_wait}}</p>
+    <div *ngIf="time_to_wait>0 && worked_on" class="timer">
+        <p>Time to wait: {{time_to_wait | formatTime}}</p>
     </div>
-
-    <div *ngIf="time_to_wait>0">
-        <form [formGroup]="updateForm" (submit)="update()">
-            <button mat-flat-button type="submit" class="primary">Get Update</button>
-        </form>
+    <div *ngIf="!worked_on">
+        <p>Please wait until your job is worked on</p>
     </div>
-    </main>
+</main>
+<app-map></app-map>
+<div>
+    <button mat-flat-button type="submit" class="update_button" (click)="update()">Get Update</button>
+</div>
+<div *ngIf="time_to_wait<=0 && worked_on">
+    <button mat-flat-button type="submit" class="get_in_button" (click)="get_in()">Enter Vehicle</button>
+</div>
