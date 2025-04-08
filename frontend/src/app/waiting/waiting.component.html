@@ -1,0 +1,22 @@
+
+<main>
+    <h2>Waiting for the Train</h2>
+   
+    <div *ngIf="time_to_wait<=0 && worked_on">
+        <p>Train arrived</p>
+    </div>
+
+    <div *ngIf="time_to_wait>0 && worked_on" class="timer">
+        <p>Time to wait: {{time_to_wait | formatTime}}</p>
+    </div>
+    <div *ngIf="!worked_on">
+        <p>Please wait until your job is worked on</p>
+    </div>
+</main>
+<app-map></app-map>
+<div>
+    <button mat-flat-button type="submit" class="update_button" (click)="update()">Get Update</button>
+</div>
+<div *ngIf="time_to_wait<=0 && worked_on">
+    <button mat-flat-button type="submit" class="get_in_button" (click)="get_in()">Enter Vehicle</button>
+</div>

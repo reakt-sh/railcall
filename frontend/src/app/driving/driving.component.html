@@ -1,0 +1,17 @@
+<main>
+    <h2>Driving to your destination</h2>
+    <div *ngIf="time_to_drive>0">
+        <p>Time to drive: {{time_to_drive | formatTime}}</p>
+    </div>
+    
+    <div *ngIf="time_to_drive<=0">
+        <p>You reached your destination</p>
+    </div>
+</main>
+<app-map></app-map>
+<div>
+    <button mat-flat-button type="submit" class="update_button" (click)="update()">Get Update</button>
+</div>
+<div *ngIf="time_to_drive<=0">
+    <button mat-flat-button type="submit" class="restart_button" (click)="restart()">Exit Vehicle</button>
+</div>

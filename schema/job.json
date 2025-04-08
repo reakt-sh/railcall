@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://reakt.sh/schema/job.json",
+    "title": "Job",
+    "description": "Stores data about a job.",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "id",
+        "start",
+        "end",
+        "picked_up",
+        "arrival_time",
+        "worked_on"
+    ],
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "The id of a Job, needed to request updates from the backend."
+        },
+        "start": {
+            "$ref": "location.json"
+        },
+        "end": {
+            "$ref": "location.json"
+        },
+        "picked_up": {
+            "type": "boolean",
+            "description": "Describes if the user was already picked up by the train."
+        },
+        "arrival_time": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The arrival time of the train"
+        },
+        "worked_on": {
+            "type": "boolean",
+            "description": "Describes if the job is currently worked on or not"
+        }
+    }
+}

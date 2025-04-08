@@ -7,6 +7,7 @@ import { Logger } from "loglevel";
 
 @Component({
     selector: "app-home",
+    standalone: true,
     imports: [MyMaterialModule],
     templateUrl: "./home.component.html",
     styleUrl: "./home.component.scss"

@@ -1,0 +1,22 @@
+<main>
+    <section>
+        <h2>Select your destination</h2>
+        <div class="description">
+            Input a station or move the marker
+        </div>
+        <div class="station-input">
+            <mat-form-field appearance="fill">
+                <mat-label>Station</mat-label>
+                <mat-select [(value)]="selectedOption">
+                    <mat-option [value]="null">No Selection</mat-option>
+                    <mat-option *ngFor="let option of options" [value]="option">
+                        {{ option }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <button mat-flat-button type="submit" class="station-button" (click)="selectDestination()">Select Location</button>
+        </div>
+    </section>
+</main>
+<app-map></app-map>

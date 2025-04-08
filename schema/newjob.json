@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://reakt.sh/schema/newjob.json",
+    "title": "NewJob",
+    "description": "Contains data about a the start and end for a job and is used to generate a new job.",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "start",
+        "end"
+    ],
+    "properties": {
+        "start": {
+            "$ref": "location.json"
+        },
+        "end": {
+            "$ref": "location.json"
+        }
+    }
+}

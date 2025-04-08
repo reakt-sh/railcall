@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">RailCall</string>
+    <string name="title_activity_main">RailCall</string>
+    <string name="package_name">sh.reakt.railcall</string>
+    <string name="custom_url_scheme">sh.reakt.railcall</string>
+</resources>

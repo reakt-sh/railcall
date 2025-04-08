@@ -6,3 +6,4 @@ python-dateutil==2.9.*
 geojson==3.1.*
 shapely==2.0.*
 pyturf==0.6.*
+geopy==2.4.1
