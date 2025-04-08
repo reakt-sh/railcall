@@ -10,7 +10,8 @@
         "start",
         "end",
         "picked_up",
-        "arrival_time"
+        "arrival_time",
+        "worked_on"
     ],
     "properties": {
         "id": {
@@ -31,6 +32,10 @@
             "type": "string",
             "format": "date-time",
             "description": "The arrival time of the train"
+        },
+        "worked_on": {
+            "type": "boolean",
+            "description": "Describes if the job is currently worked on or not"
         }
     }
 }
